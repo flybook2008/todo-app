@@ -2,10 +2,29 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=todo-app.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>待办事项</title>
+<!-- PWA 配置（与 todo-app.html 一致，供 PWABuilder 识别） -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="待办事项">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="icon" href="icon.svg">
 </head>
 <body>
 <p>正在打开待办事项…如未自动跳转，请<a href="todo-app.html">点击这里</a>。</p>
+<script>
+// 注册 Service Worker（https 公网下生效，让 PWABuilder 识别到 SW）
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("sw.js").catch(function () {});
+  });
+}
+// 跳转到主应用
+setTimeout(function () { window.location.replace("todo-app.html"); }, 50);
+</script>
 </body>
 </html>
