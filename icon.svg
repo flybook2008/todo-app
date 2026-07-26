@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a84ff"/>
+      <stop offset="100%" stop-color="#0051d5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <!-- 圆角背景 -->
+  <rect x="32" y="32" width="448" height="448" rx="100" ry="100" fill="url(#bg)" filter="url(#shadow)"/>
+  <!-- 白色清单纸 -->
+  <rect x="136" y="116" width="240" height="300" rx="28" ry="28" fill="#ffffff"/>
+  <!-- 清单横线 -->
+  <rect x="186" y="186" width="150" height="14" rx="7" fill="#d1d1e0"/>
+  <rect x="186" y="232" width="150" height="14" rx="7" fill="#d1d1e0"/>
+  <rect x="186" y="278" width="110" height="14" rx="7" fill="#d1d1e0"/>
+  <!-- 三个勾选圆圈 -->
+  <circle cx="164" cy="193" r="16" fill="none" stroke="#0a84ff" stroke-width="6"/>
+  <circle cx="164" cy="239" r="16" fill="#34c759" stroke="#34c759" stroke-width="6"/>
+  <path d="M156 239 L162 245 L173 232" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="164" cy="285" r="16" fill="none" stroke="#ff9500" stroke-width="6"/>
+</svg>

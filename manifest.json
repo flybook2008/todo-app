@@ -1,0 +1,19 @@
+{
+  "name": "待办事项",
+  "short_name": "待办",
+  "description": "苹果风格的待办事项应用，轻松管理你的任务、清单与提醒。",
+  "start_url": "./todo-app.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f2f2f7",
+  "theme_color": "#0a84ff",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
